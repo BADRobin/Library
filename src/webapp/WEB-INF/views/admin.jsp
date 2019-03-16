@@ -13,10 +13,10 @@
             <span class="glyphicon glyphicon-th-list"></span>
             ПРОДУКЦИЯ
         </a>
-        <a class="list-group-item" href="<c:url value="/admin/customer" /> ">
+        <a class="list-group-item" href="<c:url value="/admin/people" /> ">
             <span class="glyphicon glyphicon-user"></span>
             Список пользователей</a>
-        <a class="list-group-item" href="<c:url value="/admin/customerorder" /> ">
+        <a class="list-group-item" href="<c:url value="/admin/peopleorder" /> ">
             <span class="glyphicon glyphicon-th-list"></span>
             Заказы</a>
     </div>

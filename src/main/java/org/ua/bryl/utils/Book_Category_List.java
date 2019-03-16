@@ -6,14 +6,14 @@ import java.util.Map;
  * Created by olegbryl 15/08/2018.
  */
 
-public class Product_Category_List {
+public class Book_Category_List {
 
     public Map< String, String > categories = new LinkedHashMap<>();
 
-    public Product_Category_List() {
+    public Book_Category_List() {
         categories.put("Other", "Other...");
         categories.put("School Supplies", "School Supplies");
-        categories.put("Books", "Books");
+        categories.put("Book", "Book");
         categories.put("Accessories", "Accessories");
         categories.put("Sound system", "Sound system");
         categories.put("Musical instruments", "Musical instruments");

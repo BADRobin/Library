@@ -17,42 +17,42 @@
 
             <div class="form-group">
                 <label for="shipping_street">Улица</label>
-                <form:input path="cart.customer.shippingAddress.street" id="shipping_street"
+                <form:input path="cart.people.shippingAddress.street" id="shipping_street"
                             class="form-control"
                             tabindex="1"/>
             </div>
             <div class="form-group">
                 <label for="number_apartment">No.Квартиры</label>
-                <form:input path="cart.customer.shippingAddress.number_apartment" id="number_apartment"
+                <form:input path="cart.people.shippingAddress.number_apartment" id="number_apartment"
                             class="form-control"
                             tabindex="2"/>
             </div>
             <div class="form-group">
                 <label for="shipping_division">Отдел / Группа</label>
-                <form:input path="cart.customer.shippingAddress.division" id="shipping_division"
+                <form:input path="cart.people.shippingAddress.division" id="shipping_division"
                             class="form-control"
                             tabindex="3"/>
             </div>
             <div class="form-group">
                 <label for="shipping_city">Город</label>
-                <form:input path="cart.customer.shippingAddress.city" id="shipping_city"
+                <form:input path="cart.people.shippingAddress.city" id="shipping_city"
                             class="form-control"
                             tabindex="4"/>
             </div>
             <div class="form-group">
                 <label for="shipping_state">Область</label>
-                <form:input path="cart.customer.shippingAddress.state" id="shipping_state"
+                <form:input path="cart.people.shippingAddress.state" id="shipping_state"
                             class="form-control"
                             tabindex="5"/>
             </div>
             <div class="form-group">
                 <label for="shipping_country">Страна</label>
-                <form:input path="cart.customer.shippingAddress.country" id="shipping_country" class="form-control"
+                <form:input path="cart.people.shippingAddress.country" id="shipping_country" class="form-control"
                             tabindex="6"/>
             </div>
             <div class="form-group">
                 <label for="shipping_zip">Почтовый индекс</label>
-                <form:input path="cart.customer.shippingAddress.zip" id="shipping_zip" class="form-control"
+                <form:input path="cart.people.shippingAddress.zip" id="shipping_zip" class="form-control"
                             tabindex="7"/>
             </div>
             <input type="hidden" name="_flowExecutionKey"/>
@@ -65,7 +65,7 @@
                    name="_eventId_shippingDetailCollected">
             <br>
             <button class="btn btn-default" style="margin-top:15px;" tabindex="10"
-                    name="_eventId_backToCollectCustomerInfo"> Возврат
+                    name="_eventId_backToCollectpeopleInfo"> Возврат
             </button>
 
         </form:form>

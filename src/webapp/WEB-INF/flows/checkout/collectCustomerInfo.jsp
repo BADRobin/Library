@@ -16,39 +16,39 @@
                 <h3>Информация о пользователе: </h3>
                 <div class="form-group">
                     <label for="name">Имя</label>
-                    <form:input path="cart.customer.customer_name" id="name" class="form-Control" tabindex="1"/>
+                    <form:input path="cart.people.people_name" id="name" class="form-Control" tabindex="1"/>
                 </div>
                 <div class="form-group">
                     <label for="email"> Электронная почта </label>
-                    <form:input path="cart.customer.customer_email" id="email" class="form-control" tabindex="2"/>
+                    <form:input path="cart.people.people_email" id="email" class="form-control" tabindex="2"/>
                 </div>
                 <div class="form-group">
                     <label for="phone"> Телефон (10 цифр) </label>
-                    <form:input path="cart.customer.customer_phone" id="phone" class="form-control" tabindex="3"/>
+                    <form:input path="cart.people.people_phone" id="phone" class="form-control" tabindex="3"/>
                 </div>
                 <hr>
                 <h3 class="alert alert-warning">Регистрация информации об карте: </h3>
                 <div class="form-group">
                     <label for="card_holder">Карточка владельца (кредитная / дебетовая)</label>
-                    <form:input path="cart.customer.billingAddress.card_holder" id="card_holder"
+                    <form:input path="cart.people.billingAddress.card_holder" id="card_holder"
                                 class="form-control" onkeydown="upperCaseF(this)"
                                 tabindex="4"/>
                 </div>
                 <div class="form-group">
                     <label for="card_number">Номер карты</label>
-                    <form:input path="cart.customer.billingAddress.card_number" id="card_number"
+                    <form:input path="cart.people.billingAddress.card_number" id="card_number"
                                 class="form-control" maxlength="19"
                                 tabindex="5"/>
                 </div>
                 <div class="form-group">
                     <label for="date_expiration">Дата истечения срока действия</label>
-                    <form:input path="cart.customer.billingAddress.date_expiration" id="date_expiration"
+                    <form:input path="cart.people.billingAddress.date_expiration" id="date_expiration"
                                 class="form-control" maxlength="5"
                                 tabindex="6"/>
                 </div>
                 <div class="form-group">
                     <label for="security_code">Защитный код</label>
-                    <form:input path="cart.customer.billingAddress.security_code" id="security_code"
+                    <form:input path="cart.people.billingAddress.security_code" id="security_code"
                                 class="form-control" maxlength="3"
                                 tabindex="7"/>
                 </div>
@@ -58,7 +58,7 @@
                 <%-- CANCEL/NEXT  ===========--%>
                 <button class="btn btn-danger" tabindex="9" name="_eventId_cancel"> Отменить</button>
                 <input type="submit" value="Continue" class="btn btn-primary" tabindex="8"
-                       name="_eventId_customerInfoCollected">
+                       name="_eventId_peopleInfoCollected">
 
 
             </form:form>

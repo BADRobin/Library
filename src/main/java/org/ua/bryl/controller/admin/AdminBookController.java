@@ -1,8 +1,8 @@
 package org.ua.bryl.controller.admin;
 
-import org.ua.bryl.model.Product;
-import org.ua.bryl.services.ProductService;
-import org.ua.bryl.utils.Product_Category_List;
+import org.ua.bryl.model.Book;
+import org.ua.bryl.services.BookService;
+import org.ua.bryl.utils.Book_Category_List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,40 +25,40 @@ import java.nio.file.Paths;
 
 @Controller
 @RequestMapping("/admin")
-public class AdminProductController {
+public class AdminBookController {
 
 
     private Path path;
-    private Product_Category_List list_categories = new Product_Category_List();
+    private Book_Category_List list_categories = new Book_Category_List();
     @Autowired
-    private ProductService productService;
+    private BookService bookService;
 
     @RequestMapping("/inventory/add")
-    public String productAdd(Model model) {
-        Product product = new Product();
-//        product.setCondition("New");
+    public String BookAdd(Model model) {
+        Book book = new Book();
+//        book.setCondition("New");
         model.addAttribute("category_list", list_categories.categories);
-        model.addAttribute(product);
+        model.addAttribute(book);
 
-        return "productAdd";
+        return "bookAdd";
     }
 
     @RequestMapping(value = "/inventory/add" , method = RequestMethod.POST)
-    public String addProductPost(@Valid @ModelAttribute("product") Product product,
+    public String addBookPost(@Valid @ModelAttribute("book") Book book,
                                  BindingResult result, HttpServletRequest request, Model model) {
         model.addAttribute("category_list", list_categories.categories);
 
         if(result.hasErrors()) {
-            return "productAdd";
+            return "bookAdd";
         }
-        productService.addProduct(product);
-        MultipartFile product_image = product.getImage();
+        bookService.addBook(book);
+        MultipartFile book_image = book.getImage();
         String root_directory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(root_directory + "\\WEB-INF\\resources\\product_images\\" + product.getProduct_id() + ".png");
+        path = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book.getBook_id() + ".png");
 
-        if (product_image != null && !product_image.isEmpty()) {
+        if (book_image != null && !book_image.isEmpty()) {
             try {
-                product_image.transferTo(new File(path.toString()));
+                book_image.transferTo(new File(path.toString()));
                 /**
                 Scale Image to fit ascpect ratio IF NECESSARY...
                 //Convert it it to resize it
@@ -71,48 +71,48 @@ public class AdminProductController {
                 **/
             } catch (Exception e) {
                 e.printStackTrace();
-                throw new RuntimeException("The product image could not be saved.\n" + e);
+                throw new RuntimeException("The book image could not be saved.\n" + e);
             }
         }
         return "redirect:/admin/inventory";
     }
 
-    @RequestMapping("/inventory/edit/{product_id}")
-    public String editProduct(@PathVariable("product_id") int id, Model model) {
-        Product product = productService.getProductById(id);
+    @RequestMapping("/inventory/edit/{book_id}")
+    public String editBook(@PathVariable("book_id") int id, Model model) {
+        Book book = bookService.getBookById(id);
         model.addAttribute("category_list", list_categories.categories);
-        model.addAttribute("product", product);
+        model.addAttribute("book", book);
 
-        return "productEdit";
+        return "bookEdit";
     }
 
     @RequestMapping(value = "/inventory/edit", method = RequestMethod.POST)
-    public String editProductPost(@Valid @ModelAttribute("product") Product product,
+    public String editBookPost(@Valid @ModelAttribute("book") Book book,
                                   BindingResult result, Model model, HttpServletRequest request) throws RuntimeException {
         model.addAttribute("category_list", list_categories.categories);
         if (result.hasErrors()) {
-            return "productEdit";
+            return "bookEdit";
         }
-        MultipartFile productImage = product.getImage();
+        MultipartFile bookImage = book.getImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\product_images\\" + product.getProduct_id() + ".png");
+        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\book_images\\" + book.getBook_id() + ".png");
 
-        if (productImage != null && !productImage.isEmpty()) {
+        if (bookImage != null && !bookImage.isEmpty()) {
                 try {
-                    productImage.transferTo(new File(path.toString()));
+                    bookImage.transferTo(new File(path.toString()));
                 } catch (Exception e) {
-                    throw new RuntimeException("The product image could not be saved.\n" + e);
+                    throw new RuntimeException("The book image could not be saved.\n" + e);
                 }
         }
-        productService.editProduct(product);
+        bookService.editBook(book);
 
         return "redirect:/admin/inventory";
     }
 
-    @RequestMapping("/inventory/remove/{product_id}")
-    public String deleteProduct(@PathVariable("product_id") int product_id, Model model, HttpServletRequest request) {
+    @RequestMapping("/inventory/remove/{book_id}")
+    public String deleteBook(@PathVariable("book_id") int book_id, Model model, HttpServletRequest request) {
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\product_images\\" + product_id + ".png");
+        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\book_images\\" + book_id + ".png");
         if (Files.exists(path)) {
             try {
                 Files.delete(path);
@@ -120,8 +120,8 @@ public class AdminProductController {
                 e.printStackTrace();
             }
         }
-        Product product = productService.getProductById(product_id);
-        productService.deleteProduct(product);
+        Book book = bookService.getBookById(book_id);
+        bookService.deleteBook(book);
 
         return "redirect:/admin/inventory";
     }

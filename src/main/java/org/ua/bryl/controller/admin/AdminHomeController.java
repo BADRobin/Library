@@ -1,11 +1,9 @@
 package org.ua.bryl.controller.admin;
 
-import org.ua.bryl.model.Customer;
-import org.ua.bryl.model.CustomerOrder;
-import org.ua.bryl.model.Product;
-import org.ua.bryl.services.CustomerOrderService;
-import org.ua.bryl.services.CustomerService;
-import org.ua.bryl.services.ProductService;
+import org.ua.bryl.model.Book;
+import org.ua.bryl.model.People;
+import org.ua.bryl.services.PeopleService;
+import org.ua.bryl.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,13 +19,12 @@ import java.util.List;
 public class AdminHomeController {
 
     @Autowired
-    private ProductService productService;
+    private BookService bookService;
 
     @Autowired
-    private CustomerService customerService;
+    private PeopleService peopleService;
 
-    @Autowired
-    private CustomerOrderService customerOrderService;
+
 
     @RequestMapping
     public String adminHomePage() {
@@ -36,23 +33,18 @@ public class AdminHomeController {
 
     @RequestMapping("/inventory")
     public String inventory(Model model) {
-        List<Product> list_products = productService.getProductList();
-        model.addAttribute("list_products", list_products);
+        List<Book> list_books = bookService.getBookList();
+        model.addAttribute("list_books", list_books);
 
-                return "InventoryProduct";
+                return "InventoryBook";
     }
 
-    @RequestMapping("/customer")
-    public String customerManagement(Model model) {
-        List<Customer> customerList = customerService.getAllCustomers();
-        model.addAttribute("customerList", customerList);
+    @RequestMapping("/people")
+    public String peopleManagement(Model model) {
+        List<People> peopleList = peopleService.getAllPeoples();
+        model.addAttribute("peopleList", peopleList);
         return "adminUsersList";
     }
-    @RequestMapping("/customerorder")
-    public String customerOrderManagement(Model model) {
-        List<CustomerOrder> customerOrderList = customerOrderService.getAllCustomerOrders();
-        model.addAttribute("customerOrderList", customerOrderList);
-        return "adminOrdersList";
-    }
+
 
 }

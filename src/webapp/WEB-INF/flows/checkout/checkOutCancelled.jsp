@@ -16,7 +16,7 @@
             </section>
             <section>
                 <p>
-                    <a href="<spring:url value="/products"/>" class="btn btn-primary">Все товары</a>
+                    <a href="<spring:url value="/book"/>" class="btn btn-primary">Все товары</a>
                 </p>
             </section>
         </div>

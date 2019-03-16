@@ -8,8 +8,8 @@
     <!-- Portfolio Item Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">${product.firstName}
-                <small> ${product.manufacturing}</small>
+            <h1 class="page-header">${book.firstName}
+                <small> ${book.author}</small>
             </h1>
         </div>
     </div>
@@ -20,13 +20,13 @@
 
         <div class="col-md-6">
             <img class="img-responsive detalles"
-                 src="<c:url value="/resources/product_images/${product.product_id}.png" />"
-                 alt="${product.firstName}">
+                 src="<c:url value="/resources/Book_images/${book.Book_id}.png" />"
+                 alt="${book.firstName}">
         </div>
 
         <div class="col-md-6">
             <h3 class="text-info">Описание</h3>
-            <p>${product.description}</p>
+            <p>${book.description}</p>
             <h3 class="text-info">Сведения о продукте</h3>
             <table class="table table-hover table-condensed">
                 <thead>
@@ -37,24 +37,18 @@
                 </thead>
                 <tr>
                     <td><h4>Знак</h4></td>
-                    <td><h4>${product.manufacturing}</h4></td>
+                    <td><h4>${book.author}</h4></td>
                 </tr>
                 <tr>
                     <td><h4>Категория</h4></td>
-                    <td><h4>${product.category}</h4></td>
+                    <td><h4>${book.category}</h4></td>
                 </tr>
                 <%--<tr>--%>
                     <%--<td><h4>Состояние</h4></td>--%>
-                    <%--<td><h4>${product.condition}</h4></td>--%>
+                    <%--<td><h4>${book.condition}</h4></td>--%>
                 <%--</tr>--%>
-                <tr>
-                    <td><h4>Доступные единицы:</h4></td>
-                    <td><h4>${product.units_in_existence}</h4></td>
-                </tr>
-                <tr>
-                    <td><h4>Цена:</h4></td>
-                    <td><h4 class="price">$${product.price} MXN</h4></td>
-                </tr>
+
+
                 <tr>
                     <%-- the rowspan attr is used as a hack to override the table-hover effect --%>
                     <td rowspan="2">
@@ -68,7 +62,7 @@
                     </td>
                     <td rowspan="2">
                         <c:if test="${pageContext.request.userPrincipal.name != null}">
-                            <a href="#" class="btn btn-primary" ng-click="addToCart(${product.product_id})"
+                            <a href="#" class="btn btn-primary" ng-click="addToCart(${book.Book_id})"
                                data-toggle="modal" data-target="#myModal">
                                 Заказать <span class="glyphicon glyphicon-usd"></span></a>
                         </c:if>

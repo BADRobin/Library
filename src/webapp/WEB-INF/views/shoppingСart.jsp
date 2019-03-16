@@ -35,15 +35,15 @@
                             </thead>
                             <tr ng-repeat="item in cart.cart_items">
                                 <td colspan="2">
-                                    <a ng-href="/product/productDetails/{{item.product.product_id}}">{{item.product.firstName}}
+                                    <a ng-href="/book/BookDetails/{{item.book.Book_id}}">{{item.book.firstName}}
                                     </a>
                                 </td>
-                                <td> {{item.product.price | currency : $}}</td>
+
                                 <td>{{item.quantity}}</td>
-                                <td class="price"> {{item.total_price | currency : $}}</td>
+
                                 <td>
                                     <a href="#" class="btn btn-warning"
-                                       ng-click="removeFromCart(item.product.product_id)">
+                                       ng-click="removeFromCart(item.book.Book_id)">
                                         Удалить продукт<span class="glyphicon glyphicon-remove"></span>
                                     </a>
                                 </td>
@@ -51,12 +51,12 @@
                             <tr>
                                 <td colspan="4"></td>
                                 <th>Всего в заявке</th>
-                                <th class="price"> {{ calGrandTotal() | currency : $}} MXN</th>
+
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="<spring:url value="/products" />" class="btn btn-primary">
+                                    <a href="<spring:url value="/book" />" class="btn btn-primary">
                                         Добавить продукты <span class="glyphicon glyphicon-plus"></span>
                                     </a>
                                 </td>

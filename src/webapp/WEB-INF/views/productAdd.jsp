@@ -11,7 +11,7 @@
         <br>
 
         <form:form action="${pageContext.request.contextPath}/admin/inventory/add"
-                   method="post" commandName="product" enctype="multipart/form-data">
+                   method="post" commandName="book" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="firstName"> Название продукта</label> <form:errors path="firstName" cssStyle="color: red"/>
@@ -19,8 +19,8 @@
             </div>
 
             <div class="form-group">
-                <label for="manufacturing"> Производитель </label>
-                <form:input path="manufacturing" id="manufacturing" class="form-control" tabindex="2"/>
+                <label for="author"> Производитель </label>
+                <form:input path="author" id="author" class="form-control" tabindex="2"/>
             </div>
 
             <div class="form-group">
@@ -42,19 +42,11 @@
                     <%--<form:radiobutton path="condition" id="condition" value="Old"/> используемый </label>--%>
             <%--</div>--%>
 
-            <div class="form-group">
-                <label for="price"> Цена $Грн</label> <form:errors path="price" cssStyle="color: red"/>
-                <form:input path="price" id="price" class="form-control" tabindex="6"/>
-            </div>
 
-            <div class="form-group">
-                <label for="units_in_existence"> Доступные единицы </label> <form:errors
-                    path="units_in_existence" cssStyle="color: red"/>
-                <form:input path="units_in_existence" id="units_in_existence" class="form-control"
-                            tabindex="7"/>
-            </div>
 
-            <%-- UPLOAD PRODUCT IMAGE ===================--%>
+
+
+            <%-- UPLOAD Book IMAGE ===================--%>
             <div class="form-group">
                 <label class="control-label" for="image">Загрузить изображение</label>
                 <br>

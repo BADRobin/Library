@@ -23,23 +23,23 @@
         <!-- Page Features -->
         <div class="row text-center">
 
-            <c:forEach items="${list_products}" var="product">
+            <c:forEach items="${list_Book}" var="book">
                 <div class="col-md-3 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="<c:url value="/resources/product_images/${product.product_id}.png" />"
-                             alt="${product.firstName}">
+                        <img src="<c:url value="/resources/Book_images/${book.Book_id}.png" />"
+                             alt="${book.firstName}">
                         <hr>
                         <div class="caption">
-                            <p class="product-name"><b>${product.firstName}</b></p>
-                            <p class="price"><fmt:formatNumber type="currency" >${product.price}</fmt:formatNumber> MXN </p>
+                            <p class="book-name"><b>${book.firstName}</b></p>
+
 
                             <p>
-                                <a href="<spring:url value="/products/productDetails/${product.product_id}" />"
+                                <a href="<spring:url value="/book/BookDetails/${book.Book_id}" />"
                                    class="btn btn-info">
                                     Детали <span class="glyphicon glyphicon-info-sign"></span>
                                 </a>
                                 <c:if test="${pageContext.request.userPrincipal.name != null}">
-                                    <a href="#" class="btn btn-primary" ng-click="addToCart(${product.product_id})" data-toggle="modal" data-target="#myModal">
+                                    <a href="#" class="btn btn-primary" ng-click="addToCart(${book.Book_id})" data-toggle="modal" data-target="#myModal">
                                         Заказать <span class="glyphicon glyphicon-usd"></span>
                                     </a>
                                 </c:if>

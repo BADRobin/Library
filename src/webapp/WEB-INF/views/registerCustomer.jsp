@@ -14,35 +14,35 @@
             <h1> Регистрация пользователя </h1>
         </div>
         <form:form action="${pageContext.request.contextPath}/registry"
-                   method="post" commandName="customer">
+                   method="post" commandName="people">
             <h3>Информация о пользователе: </h3>
 
             <div class="form-group">
-                <label for="name"> Имя  </label> <form:errors path="customer_name" cssStyle="color: red"/>
-                <form:input path="customer_name" id="name" class="form-control" tabindex="1"/>
+                <label for="name"> Имя  </label> <form:errors path="people_name" cssStyle="color: red"/>
+                <form:input path="people_name" id="name" class="form-control" tabindex="1"/>
             </div>
 
             <div class="form-group">
-                <label for="email"> электронная почта </label> <span style="color: #ff0000">${customer_email}</span>
-                <form:input path="customer_email" id="email" class="form-control" tabindex="2"/>
+                <label for="email"> электронная почта </label> <span style="color: #ff0000">${people_email}</span>
+                <form:input path="people_email" id="email" class="form-control" tabindex="2"/>
             </div>
 
             <div class="form-group">
-                <label for="phone"> Телефон (10 цифр) </label> <form:errors path="customer_phone"
+                <label for="phone"> Телефон (10 цифр) </label> <form:errors path="people_phone"
                                                                                 cssStyle="color: red"/>
-                <form:input path="customer_phone" id="phone" class="form-control" tabindex="3"/>
+                <form:input path="people_phone" id="phone" class="form-control" tabindex="3"/>
             </div>
 
             <div class="form-group">
                 <label for="username"> Имя службы</label> <span
-                    style="color: #ff0000">${customer_username}</span>
-                <form:input path="customer_username" id="username" class="form-control" tabindex="4"/>
+                    style="color: #ff0000">${people_username}</span>
+                <form:input path="people_username" id="username" class="form-control" tabindex="4"/>
             </div>
 
             <div class="form-group">
-                <label for="password"> Пароль </label> <form:errors path="customer_password"
+                <label for="password"> Пароль </label> <form:errors path="people_password"
                                                                              cssStyle="color: red"/>
-                <form:password path="customer_password" id="password" class="form-control" tabindex="5"/>
+                <form:password path="people_password" id="password" class="form-control" tabindex="5"/>
             </div>
 
             <form:hidden path="billingAddress.card_holder" class="form-Control" />

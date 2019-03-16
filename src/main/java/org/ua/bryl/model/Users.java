@@ -14,7 +14,7 @@ public class Users {
     private String  username;
     private String  password;
     private boolean enabled;
-    private int     customer_id;
+    private int     people_id;
 
     public int getUser_id() {
         return user_id;
@@ -48,11 +48,11 @@ public class Users {
         this.enabled = enabled;
     }
 
-    public int getCustomer_id() {
-        return customer_id;
+    public int getPeople_id() {
+        return people_id;
     }
 
-    public void setCustomer_id(int customer_id) {
-        this.customer_id = customer_id;
+    public void setPeople_id(int people_id) {
+        this.people_id = people_id;
     }
 }

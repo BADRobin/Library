@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 /**
  * Created by olegbryl 15/08/2018.
  */
-public class Product_Image_Resizer {
+public class Book_Image_Resizer {
     /**
      * scale image
      *

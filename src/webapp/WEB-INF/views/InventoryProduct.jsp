@@ -27,31 +27,31 @@
                     <th></th>
                 </tr>
                 </thead>
-                <c:forEach items="${list_products}" var="product">
+                <c:forEach items="${list_Book}" var="book">
                     <tr>
-                        <td><img src="<c:url value="/resources/product_images/${product.product_id}.png" />" alt="image"></td>
-                        <td>${product.firstName}</td>
-                        <td>${product.manufacturing}</td>
-                        <td>${product.category}</td>
-                        <%--<td>${product.condition}</td>--%>
-                        <td><p class="price"><fmt:formatNumber type="currency">${product.price}</fmt:formatNumber> MXN</p></td>
+                        <td><img src="<c:url value="/resources/Book_images/${book.Book_id}.png" />" alt="image"></td>
+                        <td>${book.firstName}</td>
+                        <td>${book.author}</td>
+                        <td>${book.category}</td>
+                        <%--<td>${book.condition}</td>--%>
+
                         <td>
-                            <!-- PRODUCT INFORMATION-->
-                            <a href="<spring:url value="/products/productDetails/${product.product_id}" />"
+                            <!-- Book INFORMATION-->
+                            <a href="<spring:url value="/book/BookDetails/${book.Book_id}" />"
                                class="btn btn-info">
                                 Детали <span class=" glyphicon glyphicon-info-sign"></span>
                             </a>
                         </td>
                         <td>
-                            <!-- EDIT PRODUCT -->
-                            <a href="<spring:url value="/admin/inventory/edit/${product.product_id}" />"
+                            <!-- EDIT Book -->
+                            <a href="<spring:url value="/admin/inventory/edit/${book.Book_id}" />"
                                class="btn btn-success">
                                 Редактировать <span class="glyphicon glyphicon-pencil"></span>
                             </a>
                         </td>
                         <td>
-                            <!-- ELIMINATE PRODUCT-->
-                            <a href="<spring:url value="/admin/inventory/remove/${product.product_id}" />"
+                            <!-- ELIMINATE Book-->
+                            <a href="<spring:url value="/admin/inventory/remove/${book.Book_id}" />"
                                class="btn btn-danger">
                                 Удаление <span class="glyphicon glyphicon-remove"></span>
                             </a>

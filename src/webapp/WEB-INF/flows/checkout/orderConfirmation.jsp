@@ -30,11 +30,11 @@
                                 <address>
                                     <b>Информация о доставке</b>
                                     <br>
-                                        ${order.cart.customer.shippingAddress.street}, ${order.cart.customer.shippingAddress.number_apartment}
+                                        ${order.cart.people.shippingAddress.street}, ${order.cart.people.shippingAddress.number_apartment}
                                     <br>
-                                        ${order.cart.customer.shippingAddress.division}, ${order.cart.customer.shippingAddress.city}
+                                        ${order.cart.people.shippingAddress.division}, ${order.cart.people.shippingAddress.city}
                                     <br>
-                                        ${order.cart.customer.shippingAddress.country}, ${order.cart.customer.shippingAddress.zip}
+                                        ${order.cart.people.shippingAddress.country}, ${order.cart.people.shippingAddress.zip}
                                 </address>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6 text-right">
@@ -46,9 +46,9 @@
                                 <address>
                                     <b>Сбор данных</b>
                                     <br>
-                                        ${order.cart.customer.billingAddress.card_holder}, ${order.cart.customer.billingAddress.card_number}
+                                        ${order.cart.people.billingAddress.card_holder}, ${order.cart.people.billingAddress.card_number}
                                     <br>
-                                        ${order.cart.customer.billingAddress.date_expiration}, ${order.cart.customer.billingAddress.security_code}
+                                        ${order.cart.people.billingAddress.date_expiration}, ${order.cart.people.billingAddress.security_code}
                                     <br>
                                 </address>
                             </div>
@@ -66,16 +66,10 @@
                                 <tbody>
                                 <c:forEach var="cartItem" items="${order.cart.cart_items}">
                                     <tr>
-                                        <td class="col-md-9"><em>${cartItem.product.firstName}</em></td>
+                                        <td class="col-md-9"><em>${cartItem.book.firstName}</em></td>
                                         <td class="col-md-1 text-center">${cartItem.quantity}</td>
-                                        <td class="col-md-1 text-center">
-                                            <fmt:formatNumber
-                                                    type="currency">${cartItem.product.price}</fmt:formatNumber>
-                                        </td>
-                                        <td class="col-md-1 text-center">
-                                            <fmt:formatNumber
-                                                    type="currency">${cartItem.total_price}</fmt:formatNumber>
-                                        </td>
+
+
                                     </tr>
                                 </c:forEach>
                                 <tr>
@@ -83,9 +77,7 @@
                                     <td colspan="2" class="text-right">
                                         <h4><strong>Общий итог: </strong></h4>
                                     </td>
-                                    <td colspan="2" class="text-right price">
-                                        <h4><strong>$ ${order.cart.grand_total} MXN</strong></h4>
-                                    </td>
+
                                 </tr>
                                 </tbody>
                             </table>

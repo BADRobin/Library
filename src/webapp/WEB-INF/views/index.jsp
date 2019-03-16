@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Добро пожаловать в приложение!</h1>
-                    <p>Найдите необходимые товары тут.</p>
+                    <p>Найдите необходимые книги тут.</p>
 
                 </div>
             </div>
@@ -75,7 +75,7 @@
                  <%--width="140" height="140">--%>
             <%--<h2>HD Cam погружные</h2>--%>
             <%--<p>Не пропустите ни одного особого момента, захватите их в HD с нашими продуктами.</p>--%>
-            <%--<p><a class="btn btn-default" href="/products" role="button">Mas &raquo;</a></p>--%>
+            <%--<p><a class="btn btn-default" href="/book" role="button">Mas &raquo;</a></p>--%>
         <%--</div><!-- /.col-lg-4 -->--%>
         <%--<div class="col-lg-4">--%>
             <%--<img class="img-circle"--%>
@@ -83,7 +83,7 @@
                  <%--width="140" height="140">--%>
             <%--<h2>Пальто для леди</h2>--%>
             <%--<p>Сделать погоду вашим лучшим союзником, носить свой стиль с этим сезонным пальто.</p>--%>
-            <%--<p><a class="btn btn-default" href="/products" role="button">Mas &raquo;</a></p>--%>
+            <%--<p><a class="btn btn-default" href="/book" role="button">Mas &raquo;</a></p>--%>
         <%--</div><!-- /.col-lg-4 -->--%>
         <%--<div class="col-lg-4">--%>
             <%--<img class="img-circle"--%>
@@ -91,7 +91,7 @@
                  <%--width="140" height="140">--%>
             <%--<h2>Настольный Gamer</h2>--%>
             <%--<p>Наслаждайтесь своими играми в HD с помощью этого настольного компьютера с графикой, посвященной лучшему игровому опыту.</p>--%>
-            <%--<p><a class="btn btn-default" href="/products" role="button">Mas &raquo;</a></p>--%>
+            <%--<p><a class="btn btn-default" href="/book" role="button">Mas &raquo;</a></p>--%>
         <%--</div><!-- /.col-lg-4 -->--%>
     <%--</div><!-- /.row -->--%>
 </div>

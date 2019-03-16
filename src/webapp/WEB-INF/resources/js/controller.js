@@ -19,28 +19,17 @@ cartApp.controller("cartCtrl", function ($scope, $http) {
         $scope.cart_id = cart_id;
         $scope.refreshCart(cart_id);
     };
-    $scope.addToCart = function (product_id) {
-        $http.put("/rest/cart/add/" + product_id).success(function () {
+    $scope.addToCart = function (Book_id) {
+        $http.put("/rest/cart/add/" + Book_id).success(function () {
             $scope.refreshCart();
         });
     };
-    $scope.removeFromCart = function (product_id) {
-        $http.put("/rest/cart/remove/" + product_id).success(function (data) {
+    $scope.removeFromCart = function (Book_id) {
+        $http.put("/rest/cart/remove/" + Book_id).success(function (data) {
             $scope.refreshCart();
         });
     };
-    $scope.calGrandTotal = function () {
-        var grandTotal = 0;
-        if (typeof($scope.cart) !== 'undefined') {
-            for (var i = 0; i < $scope.cart.cart_items.length; i++) {
-                grandTotal += $scope.cart.cart_items[i].total_price;
-            }
-            return grandTotal;
-        }else {
-            return 0;
-        }
 
-    }
 
 });
 

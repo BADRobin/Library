@@ -1,7 +1,7 @@
 package org.ua.bryl.dao.implementation;
 
-import org.ua.bryl.dao.Dao_Product;
-import org.ua.bryl.model.Product;
+import org.ua.bryl.dao.Dao_Book;
+import org.ua.bryl.model.Book;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -16,43 +16,43 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class DaoProductImp implements Dao_Product {
+public class DaoBookImp implements Dao_Book {
 
     @Autowired
     private SessionFactory sessionFactory;
 
-    public List<Product> getProductList() {
+    public List<Book> getBookList() {
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("from Product");
-        List<Product> list_products = query.list();
+        Query query = session.createQuery("from Book");
+        List<Book> list_books = query.list();
         session.flush();
 
-        return list_products;
+        return list_books;
     }
 
-    public Product getProductById(int product_id) {
+    public Book getBookById(int book_id) {
         Session session = sessionFactory.getCurrentSession();
-        Product product = (Product) session.get(Product.class, product_id);
+        Book book = (Book) session.get(Book.class, book_id);
         session.flush();
 
-        return product;
+        return book;
     }
 
-    public void addProduct(Product product) {
+    public void addBook(Book book) {
         Session session = sessionFactory.getCurrentSession();
-        session.saveOrUpdate(product);
-        session.flush();
-    }
-
-    public void editProduct(Product product) {
-        Session session = sessionFactory.getCurrentSession();
-        session.saveOrUpdate(product);
+        session.saveOrUpdate(book);
         session.flush();
     }
 
-    public void deleteProduct(Product product) {
+    public void editBook(Book book) {
         Session session = sessionFactory.getCurrentSession();
-        session.delete(product);
+        session.saveOrUpdate(book);
+        session.flush();
+    }
+
+    public void deleteBook(Book book) {
+        Session session = sessionFactory.getCurrentSession();
+        session.delete(book);
         session.flush();
     }
 }

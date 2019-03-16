@@ -11,18 +11,18 @@
         <br>
 
         <form:form action="${pageContext.request.contextPath}/admin/inventory/edit"
-                   method="post" commandName="product" enctype="multipart/form-data">
-            <form:hidden path="product_id" value="${product.product_id}"/>
+                   method="post" commandName="book" enctype="multipart/form-data">
+            <form:hidden path="Bookt_id" value="${book.Book_id}"/>
 
             <div class="form-group">
                 <label for="firstName"> Название продукта</label> <form:errors path="firstName" cssStyle="color: red"/>
-                <form:input path="firstName" id="firstName" class="form-control" value="${product.firstName}"/>
+                <form:input path="firstName" id="firstName" class="form-control" value="${book.firstName}"/>
             </div>
 
             <div class="form-group">
-                <label for="manufacturing"> Производство </label>
-                <form:input path="manufacturing" id="manufacturing" class="form-control"
-                            value="${product.manufacturing}"/>
+                <label for="author"> Производство </label>
+                <form:input path="author" id="author" class="form-control"
+                            value="${book.author}"/>
             </div>
 
             <div class="form-group">
@@ -33,7 +33,7 @@
             <div class="form-group">
                 <label for="description"> Описание продукта</label>
                 <form:textarea path="description" id="description" class="form-control"
-                               value="${product.description}"/>
+                               value="${book.description}"/>
             </div>
 
             <%--<div class="form-group">--%>
@@ -45,19 +45,11 @@
                     <%--<form:radiobutton path="condition" id="condition" value="Old"/> Используемый </label>--%>
             <%--</div>--%>
 
-            <div class="form-group">
-                <label for="price"> Цена $ MXN</label> <form:errors path="price" cssStyle="color: red"/>
-                <form:input path="price" id="price" class="form-control" value="${product.price}"/>
-            </div>
 
-            <div class="form-group">
-                <label for="units_in_existence"> Доступные единицы </label> <form:errors
-                    path="units_in_existence" cssStyle="color: red"/>
-                <form:input path="units_in_existence" id="units_in_existence" class="form-control"
-                            value="${product.units_in_existence}"/>
-            </div>
 
-            <%-- UPLOAD PRODUCT IMAGE  ===================--%>
+
+
+            <%-- UPLOAD Book IMAGE  ===================--%>
             <div class="form-group">
                 <label class="control-label" for="image">Загрузить изображение</label>
                 <form:input path="image" id="image" type="file" class="form:input-large"/>

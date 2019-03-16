@@ -58,10 +58,10 @@
                     <ul class="nav navbar-nav pull-left">
                         <li><a href="<c:url value="/"/>">
                             <span class="glyphicon glyphicon-home"></span> На главную</a></li>
-                        <li><a href="<c:url value="/products"/>">
+                        <li><a href="<c:url value="/book"/>">
                             <span class="glyphicon glyphicon-th-list"></span> Продукты для продажи</a></li>
                         <c:if test="${pageContext.request.userPrincipal.name != null && pageContext.request.userPrincipal.name != 'admin'}">
-                            <li><a href="<c:url value="/customer/cart" />">
+                            <li><a href="<c:url value="/people/cart" />">
                                 <span class="glyphicon glyphicon-shopping-cart"></span> Корзина покупок</a></li>
                         </c:if>
                     </ul>

@@ -19,16 +19,16 @@
                 <th>состояние</th>
             </tr>
             </thead>
-            <c:forEach items="${customerList}" var="customer">
+            <c:forEach items="${peopleList}" var="people">
                 <tr>
-                    <td>${customer.customer_name}</td>
-                    <td>${customer.customer_email}</td>
-                    <td>${customer.customer_phone}</td>
-                    <td>${customer.customer_username}</td>
-                    <c:if test="${customer.enabled == true}">
+                    <td>${people.people_name}</td>
+                    <td>${people.people_email}</td>
+                    <td>${people.people_phone}</td>
+                    <td>${people.people_username}</td>
+                    <c:if test="${people.enabled == true}">
                         <td>активный</td>
                     </c:if>
-                    <c:if test="${customer.enabled == false}">
+                    <c:if test="${people.enabled == false}">
                         <td>неактивный</td>
                     </c:if>
 
