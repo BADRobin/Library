@@ -32,8 +32,8 @@
                  alt="Second slide">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Большой выбор!</h1>
-                    <p>Все неоходимое для работы.</p>
+                    <h1>Большой выбор литературы!</h1>
+                    <p>Все жанры.</p>
                 </div>
             </div>
         </div>

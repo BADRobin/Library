@@ -12,7 +12,7 @@
     <meta name="author" content="Нач хоз службы Брыль О.Л.">
     <link rel="icon" href="<c:url value="/WEB-INF/resources/site-images/ship.ico" />">
 
-    <title>ТОВ "МСК"</title>
+    <title>Библиотека</title>
 
     <!-- Angular JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -59,11 +59,8 @@
                         <li><a href="<c:url value="/"/>">
                             <span class="glyphicon glyphicon-home"></span> На главную</a></li>
                         <li><a href="<c:url value="/book"/>">
-                            <span class="glyphicon glyphicon-th-list"></span> Продукты для продажи</a></li>
-                        <c:if test="${pageContext.request.userPrincipal.name != null && pageContext.request.userPrincipal.name != 'admin'}">
-                            <li><a href="<c:url value="/people/cart" />">
-                                <span class="glyphicon glyphicon-shopping-cart"></span> Корзина покупок</a></li>
-                        </c:if>
+                            <span class="glyphicon glyphicon-th-list"></span> Библиотека</a></li>
+
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                         <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
@@ -83,7 +80,7 @@
                             <li><a href="<c:url value="/registry" />">
                                 <span class="glyphicon glyphicon-plus-sign"></span> Создать учетную запись</a></li>
                             <li><a href="<c:url value="/login" />">
-                                <span class="glyphicon glyphicon-user"></span> Начало сеанса</a></li>
+                                <span class="glyphicon glyphicon-user"></span> Вход</a></li>
                         </c:if>
                     </ul>
                 </div>

@@ -6,32 +6,32 @@
 
 <div class="container-wrapper">
     <div class="container">
-        <h1>Изменить продукт</h1>
+        <h1>Изменить</h1>
         <br>
         <br>
 
         <form:form action="${pageContext.request.contextPath}/admin/inventory/edit"
                    method="post" commandName="book" enctype="multipart/form-data">
-            <form:hidden path="Bookt_id" value="${book.Book_id}"/>
+            <form:hidden path="Bookt_id" value="${book.book_id}"/>
 
             <div class="form-group">
-                <label for="firstName"> Название продукта</label> <form:errors path="firstName" cssStyle="color: red"/>
+                <label for="firstName"> Название книги</label> <form:errors path="firstName" cssStyle="color: red"/>
                 <form:input path="firstName" id="firstName" class="form-control" value="${book.firstName}"/>
             </div>
 
             <div class="form-group">
-                <label for="author"> Производство </label>
+                <label for="author"> Автор </label>
                 <form:input path="author" id="author" class="form-control"
                             value="${book.author}"/>
             </div>
 
             <div class="form-group">
-                <label for="category"> Категория </label> <form:errors path="category" cssStyle="color: red"/>
+                <label for="category"> Жанр </label> <form:errors path="category" cssStyle="color: red"/>
                 <form:select path="category" id="category" class="form-control" items="${category_list}"/>
             </div>
 
             <div class="form-group">
-                <label for="description"> Описание продукта</label>
+                <label for="description"> Краткое описание </label>
                 <form:textarea path="description" id="description" class="form-control"
                                value="${book.description}"/>
             </div>

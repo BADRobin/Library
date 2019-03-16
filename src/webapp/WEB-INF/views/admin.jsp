@@ -16,9 +16,7 @@
         <a class="list-group-item" href="<c:url value="/admin/people" /> ">
             <span class="glyphicon glyphicon-user"></span>
             Список пользователей</a>
-        <a class="list-group-item" href="<c:url value="/admin/peopleorder" /> ">
-            <span class="glyphicon glyphicon-th-list"></span>
-            Заказы</a>
+
     </div>
     <%--INSERT INTO  users VALUES (1,0,true,'admin','admin');--%>
     <%--INSERT INTO authorities VALUES (1,'ROLE_ADMIN','admin');--%>

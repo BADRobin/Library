@@ -20,14 +20,13 @@
 
         <div class="col-md-6">
             <img class="img-responsive detalles"
-                 src="<c:url value="/resources/Book_images/${book.Book_id}.png" />"
+                 src="<c:url value="/resources/Book_images/${book.book_id}.png" />"
                  alt="${book.firstName}">
         </div>
 
         <div class="col-md-6">
-            <h3 class="text-info">Описание</h3>
-            <p>${book.description}</p>
-            <h3 class="text-info">Сведения о продукте</h3>
+
+            <h3 class="text-info">Сведения о книге</h3>
             <table class="table table-hover table-condensed">
                 <thead>
                 <tr>
@@ -36,39 +35,36 @@
                 </tr>
                 </thead>
                 <tr>
-                    <td><h4>Знак</h4></td>
+                    <td><h4>Автор</h4></td>
                     <td><h4>${book.author}</h4></td>
                 </tr>
                 <tr>
-                    <td><h4>Категория</h4></td>
+                    <td><h4>Жанр</h4></td>
                     <td><h4>${book.category}</h4></td>
                 </tr>
-                <%--<tr>--%>
-                    <%--<td><h4>Состояние</h4></td>--%>
-                    <%--<td><h4>${book.condition}</h4></td>--%>
-                <%--</tr>--%>
-
 
                 <tr>
+                    <h3 class="text-info">Краткое описание</h3>
+                    <p>${book.description}</p>
                     <%-- the rowspan attr is used as a hack to override the table-hover effect --%>
                     <td rowspan="2">
                         <div class="pager">
                             <li>
                                 <a href="javascript:history.back()">
-                                    <span class="glyphicon glyphicon-backward"></span> Возвращение
+                                    <span class="glyphicon glyphicon-backward"></span> Назад
                                 </a>
                             </li>
                         </div>
                     </td>
                     <td rowspan="2">
                         <c:if test="${pageContext.request.userPrincipal.name != null}">
-                            <a href="#" class="btn btn-primary" ng-click="addToCart(${book.Book_id})"
+                            <a href="#" class="btn btn-primary" ng-click="addToCart(${book.book_id})"
                                data-toggle="modal" data-target="#myModal">
-                                Заказать <span class="glyphicon glyphicon-usd"></span></a>
+                                Скачать <span class="glyphicon glyphicon-usd"></span></a>
                         </c:if>
                         <c:if test="${pageContext.request.userPrincipal.name == null}">
                             <button type="button" href="<spring:url value="/login"/>" class="btn btn-primary">
-                                Заказать <span class="glyphicon glyphicon-usd"></span></button>
+                                Скачать <span class="glyphicon glyphicon-usd"></span></button>
                         </c:if>
                     </td>
                 </tr>

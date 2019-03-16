@@ -16,7 +16,7 @@
                 <th>Email</th>
                 <th>телефон</th>
                 <th>Имя пользователя</th>
-                <th>состояние</th>
+                <th>Состояние</th>
             </tr>
             </thead>
             <c:forEach items="${peopleList}" var="people">
@@ -39,7 +39,7 @@
             <br>
             <li>
                 <a href="<c:url value="/admin"/>">
-                    <span class="glyphicon glyphicon-backward"></span> Возврат
+                    <span class="glyphicon glyphicon-backward"></span> Назад
                 </a>
             </li>
         </div>

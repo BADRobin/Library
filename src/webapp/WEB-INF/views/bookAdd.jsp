@@ -6,7 +6,7 @@
 
 <div class="container-wrapper">
     <div class="container">
-        <h1>Добавить продукт</h1>
+        <h1>Добавить книгу</h1>
         <br>
         <br>
 
@@ -14,33 +14,25 @@
                    method="post" commandName="book" enctype="multipart/form-data">
 
             <div class="form-group">
-                <label for="firstName"> Название продукта</label> <form:errors path="firstName" cssStyle="color: red"/>
+                <label for="firstName"> Название книги</label> <form:errors path="firstName" cssStyle="color: red"/>
                 <form:input path="firstName" id="firstName" class="form-control" tabindex="1"/>
             </div>
 
             <div class="form-group">
-                <label for="author"> Производитель </label>
+                <label for="author"> Автор </label>
                 <form:input path="author" id="author" class="form-control" tabindex="2"/>
             </div>
 
             <div class="form-group">
-                <label for="category"> Категория </label> <form:errors path="category" cssStyle="color: red"/>
+                <label for="category"> Жанр </label> <form:errors path="category" cssStyle="color: red"/>
                 <form:select path="category" id="category" class="form-control" items="${category_list}"
                              tabindex="3"/>
             </div>
 
             <div class="form-group">
-                <label for="description"> Описание продукта</label>
+                <label for="description"> Краткое описание ...</label>
                 <form:textarea path="description" id="description" class="form-control" tabindex="4"/>
             </div>
-
-            <%--<div class="form-group">--%>
-                <%--<label for="condition"> Состояние продукта</label>--%>
-                <%--<label class="checkbox-inline">--%>
-                    <%--<form:radiobutton path="condition" id="condition" value="New" tabindex="5"/> новый </label>--%>
-                <%--<label class="checkbox-inline">--%>
-                    <%--<form:radiobutton path="condition" id="condition" value="Old"/> используемый </label>--%>
-            <%--</div>--%>
 
 
 

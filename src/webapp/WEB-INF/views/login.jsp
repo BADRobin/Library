@@ -13,7 +13,7 @@
     <meta name="author" content="Нач хоз службы Брыль О.Л.">
     <link rel="icon" href="<c:url value="/resources/site-images/ship.ico" />">
 
-    <title>ООО "МСК"</title>
+    <title>ELib</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" />" rel="stylesheet">
@@ -61,11 +61,8 @@
                         <li><a href="<c:url value="/"/>">
                             <span class="glyphicon glyphicon-home"></span> На главную</a></li>
                         <li><a href="<c:url value="/book"/>">
-                            <span class="glyphicon glyphicon-th-list"></span> Товары </a></li>
-                        <c:if test="${pageContext.request.userPrincipal.name != null && pageContext.request.userPrincipal.name != 'admin'}">
-                            <li><a href="<c:url value="/people/cart" />">
-                                <span class="glyphicon glyphicon-shopping-cart"></span> Обзор заявки</a></li>
-                        </c:if>
+                            <span class="glyphicon glyphicon-th-list"></span> Библтотека </a></li>
+
                         <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
                             <li><a href="<c:url value="/admin" />">
                                 <span class="glyphicon glyphicon-off"></span> Меню администратора</a></li>
@@ -85,7 +82,7 @@
                             <li><a href="<c:url value="/registry" />">
                                 <span class="glyphicon glyphicon-plus-sign"></span> Создать учетную запись</a></li>
                             <li><a href="<c:url value="/login" />">
-                                <span class="glyphicon glyphicon-user"></span> Начало сеанса</a></li>
+                                <span class="glyphicon glyphicon-user"></span> Авторизация</a></li>
                         </c:if>
                     </ul>
                 </div>
@@ -96,8 +93,8 @@
 
 <div class="container">
     <div class="page-header center">
-        <h1>ТОВ "МСК"
-            <small>Вход</small>
+        <h1>Библиотека
+            <small>Всегда рады вас видеть</small>
         </h1>
     </div>
 </div>
@@ -115,7 +112,7 @@
 
                 <div class="form-top">
                     <div class="center">
-                        <h3 style="color:#3e8f3e">Начало сеанса </h3>
+                        <h3 style="color:#3e8f3e">Авторизация </h3>
                     </div>
                 </div>
                 <div class="form-bottom">
@@ -146,7 +143,7 @@
             <h4>
                 Вы еще не зарегистрированы? <br><br>
                 <a class="label label-success" href="<c:url value="/registry"/>" tabindex="4">
-                    Зарегестрируйтесь
+                    Зарегестрируйтесь тут
                 </a>
             </h4>
         </div>
