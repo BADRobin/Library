@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 /**
- * Created by olegbryl 07/08/2018.
+ * Created by olegbryl 18/03/2019.
  */
 @Controller
 @RequestMapping("/admin")

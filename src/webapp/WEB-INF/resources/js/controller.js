@@ -1,5 +1,5 @@
 /**
- * Created by olegbryl on 18/10/2018.
+ * Created by olegbryl on 18/03/2019.
  */
 
 var cartApp = angular.module("cartApp", []);

@@ -7,7 +7,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import java.io.Serializable;
 /**
- * Created by olegbryl 03/08/2018.
+ * Created by olegbryl 18/03/2019.
  */
 
 @Entity

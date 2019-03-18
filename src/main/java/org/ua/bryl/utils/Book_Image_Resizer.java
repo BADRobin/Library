@@ -5,7 +5,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
 /**
- * Created by olegbryl 15/08/2018.
+ * Created by olegbryl 18/03/2019.
  */
 public class Book_Image_Resizer {
     /**

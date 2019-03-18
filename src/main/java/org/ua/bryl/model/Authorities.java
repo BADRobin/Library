@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Created by olegbryl 08/08/2018.
+ * Created by olegbryl 18/03/2019
  */
 
 @Entity

@@ -5,7 +5,7 @@
     <hr>
     <footer>
         <p class="pull-right"><a href="#">Подняться вверх</a></p>
-        <p>&copy; 2018 Oleg Bryl &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2019 Oleg Bryl &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
     </footer>
 </div>
 

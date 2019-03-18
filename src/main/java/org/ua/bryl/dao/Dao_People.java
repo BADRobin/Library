@@ -4,7 +4,7 @@ import org.ua.bryl.model.People;
 
 import java.util.List;
 /**
- * Created by olegbryl 01/08/2018.
+ * Created by olegbryl 18/03/2019.
  */
 
 public interface Dao_People {

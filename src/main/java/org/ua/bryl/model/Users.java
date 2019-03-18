@@ -3,7 +3,7 @@ package org.ua.bryl.model;
 import javax.persistence.*;
 
 /**
- * Created by olegbryl 03/08/2018.
+ * Created by olegbryl 18/03/2019.
  */
 @Entity
 public class Users {
