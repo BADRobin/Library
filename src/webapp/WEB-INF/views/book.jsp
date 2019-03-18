@@ -23,10 +23,10 @@
         <!-- Page Features -->
         <div class="row text-center">
 
-            <c:forEach items="${list_book}" var="book">
+            <c:forEach items="${list_books}" var="book">
                 <div class="col-md-3 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="<c:url value="/resources/Book_images/${book.book_id}.png" />"
+                        <img src="<c:url value="/resources/book_images/${book.book_id}.png" />"
                              alt="${book.firstName}">
                         <hr>
                         <div class="caption">
@@ -34,18 +34,18 @@
 
 
                             <p>
-                                <a href="<spring:url value="/book/BookDetails/${book.book_id}" />"
+                                <a href="<spring:url value="/book/bookDetails/${book.book_id}" />"
                                    class="btn btn-info">
                                     Детали <span class="glyphicon glyphicon-info-sign"></span>
                                 </a>
                                 <c:if test="${pageContext.request.userPrincipal.name != null}">
                                     <a href="#" class="btn btn-primary" ng-click="addToCart(${book.book_id})" data-toggle="modal" data-target="#myModal">
-                                        Скачать <span class="glyphicon glyphicon-usd"></span>
+                                        Скачать <span class="glyphicon glyphicon-download"></span>
                                     </a>
                                 </c:if>
                                 <c:if test="${pageContext.request.userPrincipal.name == null}">
                                     <a href="<c:url value="/login"/>" class="btn btn-primary">
-                                        Скачать <span class="glyphicon glyphicon-usd"></span>
+                                        Скачать <span class="glyphicon glyphicon-download"></span>
                                     </a>
                                 </c:if>
                             </p>

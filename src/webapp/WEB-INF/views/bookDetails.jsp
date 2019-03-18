@@ -20,7 +20,7 @@
 
         <div class="col-md-6">
             <img class="img-responsive detalles"
-                 src="<c:url value="/resources/Book_images/${book.book_id}.png" />"
+                 src="<c:url value="/resources/book_images/${book.book_id}.png" />"
                  alt="${book.firstName}">
         </div>
 
@@ -44,8 +44,10 @@
                 </tr>
 
                 <tr>
-                    <h3 class="text-info">Краткое описание</h3>
-                    <p>${book.description}</p>
+
+                    <td><h3 class="text-info">Краткое описание</h3></td>
+                    <td><p>${book.description}</p></td>
+                </tr>
                     <%-- the rowspan attr is used as a hack to override the table-hover effect --%>
                     <td rowspan="2">
                         <div class="pager">
@@ -60,11 +62,11 @@
                         <c:if test="${pageContext.request.userPrincipal.name != null}">
                             <a href="#" class="btn btn-primary" ng-click="addToCart(${book.book_id})"
                                data-toggle="modal" data-target="#myModal">
-                                Скачать <span class="glyphicon glyphicon-usd"></span></a>
+                                Скачать <span class="glyphicon glyphicon-download"></span></a>
                         </c:if>
                         <c:if test="${pageContext.request.userPrincipal.name == null}">
                             <button type="button" href="<spring:url value="/login"/>" class="btn btn-primary">
-                                Скачать <span class="glyphicon glyphicon-usd"></span></button>
+                                Скачать <span class="glyphicon glyphicon-download"></span></button>
                         </c:if>
                     </td>
                 </tr>
@@ -75,23 +77,23 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+<%--<div class="modal fade" id="myModal" role="dialog">--%>
+    <%--<div class="modal-dialog">--%>
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Близко</button>
-                <h3 class="modal-title" style="text-shadow: 1px 1px 2px dodgerblue"> Успешная работа</h3>
-            </div>
-            <div class="modal-body">
-                <h3 style="text-shadow: 1px 1px 2px darkorchid">Продукт добавлен в вашу заявку с успехом.</h3>
-                <br>
-            </div>
-        </div>
+        <%--<!-- Modal content-->--%>
+        <%--<div class="modal-content">--%>
+            <%--<div class="modal-header">--%>
+                <%--<button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Близко</button>--%>
+                <%--<h3 class="modal-title" style="text-shadow: 1px 1px 2px dodgerblue"> Успешная работа</h3>--%>
+            <%--</div>--%>
+            <%--<div class="modal-body">--%>
+                <%--<h3 style="text-shadow: 1px 1px 2px darkorchid">Продукт добавлен в вашу заявку с успехом.</h3>--%>
+                <%--<br>--%>
+            <%--</div>--%>
+        <%--</div>--%>
 
-    </div>
-</div>
+    <%--</div>--%>
+<%--</div>--%>
 
 <!-- /.row -->
 

@@ -33,6 +33,6 @@ public class BookController {
         Book book = bookService.getBookById(book_id);
         model.addAttribute(book);
 
-        return "pookDetails";
+        return "bookDetails";
     }
 }

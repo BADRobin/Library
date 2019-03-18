@@ -11,7 +11,7 @@
         </p>
         <a class="list-group-item" href="<c:url value="/admin/inventory" />">
             <span class="glyphicon glyphicon-th-list"></span>
-            ПРОДУКЦИЯ
+            БИБЛИОТЕКА
         </a>
         <a class="list-group-item" href="<c:url value="/admin/people" /> ">
             <span class="glyphicon glyphicon-user"></span>

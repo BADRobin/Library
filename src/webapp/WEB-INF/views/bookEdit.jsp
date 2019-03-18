@@ -12,7 +12,7 @@
 
         <form:form action="${pageContext.request.contextPath}/admin/inventory/edit"
                    method="post" commandName="book" enctype="multipart/form-data">
-            <form:hidden path="Bookt_id" value="${book.book_id}"/>
+            <form:hidden path="book_id" value="${book.book_id}"/>
 
             <div class="form-group">
                 <label for="firstName"> Название книги</label> <form:errors path="firstName" cssStyle="color: red"/>
