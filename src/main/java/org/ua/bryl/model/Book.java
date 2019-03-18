@@ -19,13 +19,11 @@ public class Book implements Serializable {
     private static final long serialVersionUID = -5275312162791227880L;
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int book_id;
 
     @NotEmpty(message = "The name of the book is required")
-    @GeneratedValue
-//    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String firstName;
 
     private String description;
@@ -38,6 +36,7 @@ public class Book implements Serializable {
 
     @Transient
     private MultipartFile image;
+
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonIgnore
@@ -82,8 +81,6 @@ public class Book implements Serializable {
         this.category = category;
     }
 
-
-
     public String getAuthor() {
         return author;
     }
@@ -91,10 +88,4 @@ public class Book implements Serializable {
     public void setAuthor(String author) {
         this.author = author;
     }
-
-
-
-
-
-
 }

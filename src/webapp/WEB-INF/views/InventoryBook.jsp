@@ -36,7 +36,7 @@
 
                         <td>
                             <!-- Book INFORMATION-->
-                            <a href="<spring:url value="/book/bookDetails/${book.book_id}" />"
+                            <a href="<spring:url value="/book/BookDetails/${book.book_id}" />"
                                class="btn btn-info">
                                 Детали <span class=" glyphicon glyphicon-info-sign"></span>
                             </a>

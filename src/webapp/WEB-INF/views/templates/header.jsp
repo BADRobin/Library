@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Форма заявки на приобретение канцелярии.">
-    <meta name="author" content="Нач хоз службы Брыль О.Л.">
-    <link rel="icon" href="<c:url value="/WEB-INF/resources/site-images/ship.ico" />">
+    <meta name="description" content="Форма .....">
+    <meta name="author" content="Разработчик Брыль О.Л.">
+    <link rel="icon" href="<c:url value="/WEB-INF/resources/site-images/33.png" />">
 
     <title>Библиотека</title>
 
@@ -51,7 +51,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<c:url value="/" />"/>
-                    <img src="<c:url value="/WEB-INF/resources/site-images/ship2.png" />">
+                    <img src="<c:url value="/WEB-INF/resources/site-images/48.png" />">
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">

@@ -11,16 +11,16 @@ public class Book_Category_List {
     public Map< String, String > categories = new LinkedHashMap<>();
 
     public Book_Category_List() {
-        categories.put("Other", "Other...");
-        categories.put("School Supplies", "School Supplies");
-        categories.put("Book", "Book");
-        categories.put("Accessories", "Accessories");
-        categories.put("Sound system", "Sound system");
-        categories.put("Musical instruments", "Musical instruments");
-        categories.put("Computer / Electronics", "Computer / Electronics");
-        categories.put("Cell phones / tablets", "Cell phones / tablets");
-        categories.put("Home", "Home");
-        categories.put("Furniture", "Furniture");
+        categories.put("Detective", "Detective...");
+        categories.put("Drama", "Drama");
+        categories.put("Historical novel", "Historical novel");
+        categories.put("Fantasy", "Fantasy");
+        categories.put("The horrors", "The horrors");
+        categories.put("Scientific literature", "Scientific literature");
+        categories.put("Children's literature", "Children's literature");
+        categories.put("Everything for the kitchen", "Everything for the kitchen");
+        categories.put("For home", "For home");
+        categories.put("Magazines", "Magazines");
     }
 
     public Map<String, String> getCategory_List() {

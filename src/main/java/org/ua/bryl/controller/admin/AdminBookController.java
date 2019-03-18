@@ -1,5 +1,8 @@
 package org.ua.bryl.controller.admin;
 
+
+import org.springframework.web.bind.annotation.*;
+
 import org.ua.bryl.model.Book;
 import org.ua.bryl.services.BookService;
 import org.ua.bryl.utils.Book_Category_List;
@@ -7,18 +10,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.File;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+
+
 /**
  * Created by olegbryl 01/08/2018.
  */
@@ -28,15 +30,18 @@ import java.nio.file.Paths;
 public class AdminBookController {
 
 
+
     private Path path;
     private Book_Category_List list_categories = new Book_Category_List();
     @Autowired
     private BookService bookService;
 
+
+
     @RequestMapping("/inventory/add")
     public String BookAdd(Model model) {
         Book book = new Book();
-//        book.setCondition("New");
+
         model.addAttribute("category_list", list_categories.categories);
         model.addAttribute(book);
 
@@ -59,16 +64,7 @@ public class AdminBookController {
         if (book_image != null && !book_image.isEmpty()) {
             try {
                 book_image.transferTo(new File(path.toString()));
-                /**
-                Scale Image to fit ascpect ratio IF NECESSARY...
-                //Convert it it to resize it
-                // Retrieve Image
-                BufferedImage buffer = ImageIO.read(new File(path.toString()));
-                int image_type = buffer.getType();
-                BufferedImage bufferNew = image_resizer.scale(buffer, image_type, 700, 600, 1.4, 1.4);
-                File outputfile = new File(path.toString());
-                ImageIO.write(bufferNew, "png", outputfile); // Write the Buffered Image into an output file
-                **/
+
             } catch (Exception e) {
                 e.printStackTrace();
                 throw new RuntimeException("The book image could not be saved.\n" + e);

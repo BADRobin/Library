@@ -36,14 +36,7 @@
                                value="${book.description}"/>
             </div>
 
-            <%--<div class="form-group">--%>
-                <%--<label for="condition"> Состояние продукта</label>--%>
-                <%--<br>--%>
-                <%--<label class="checkbox-inline">--%>
-                    <%--<form:radiobutton path="condition" id="condition" value="New"/> Новый </label>--%>
-                <%--<label class="checkbox-inline">--%>
-                    <%--<form:radiobutton path="condition" id="condition" value="Old"/> Используемый </label>--%>
-            <%--</div>--%>
+
 
 
 

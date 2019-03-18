@@ -34,7 +34,7 @@
 
 
                             <p>
-                                <a href="<spring:url value="/book/bookDetails/${book.book_id}" />"
+                                <a href="<spring:url value="/book/BookDetails/${book.book_id}" />"
                                    class="btn btn-info">
                                     Детали <span class="glyphicon glyphicon-info-sign"></span>
                                 </a>
@@ -61,24 +61,7 @@
     <!-- /.container -->
 </div>
 
-<!-- Modal -->
-<%--<div class="modal fade" id="myModal" role="dialog">--%>
-    <%--<div class="modal-dialog">--%>
 
-        <%--<!-- Modal content-->--%>
-        <%--<div class="modal-content">--%>
-            <%--<div class="modal-header">--%>
-                <%--<button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Закрыть</button>--%>
-                <%--<h3 class="modal-title" style="text-shadow: 1px 1px 2px dodgerblue"> Успешная работа </h3>--%>
-            <%--</div>--%>
-            <%--<div class="modal-body">--%>
-                <%--<h3 style="text-shadow: 1px 1px 2px darkorchid">Продукт добавлен вашу заявку с успехом.</h3>--%>
-                <%--<br>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-
-    <%--</div>--%>
-<%--</div>--%>
 
 <script src="/resources/js/controller.js" type="text/javascript"></script>
 <%@include file="/WEB-INF/views/templates/footer.jsp" %>

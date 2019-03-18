@@ -6,12 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd http://www.springframework.org/schema/webflow-config http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd">
 
 
-    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
-        <!--<property name="driverClassName" value="org.h2.Driver" />-->
-        <!--<property name="url" value="jdbc:h2:tcp://localhost/~/orders-list" />-->
-        <!--<property name="username" value="sa" />-->
-        <!--<property name="password" value="" />-->
-    <!--</bean>-->
+
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/newbooklib" />
@@ -20,18 +15,7 @@
     </bean>
     <!--INSERT INTO  users VALUES (1,0,true,'admin','admin');-->
     <!--INSERT INTO authorities VALUES (1,'ROLE_ADMIN','admin');-->
-    <!--<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">-->
-        <!--<property name="dataSource" ref="dataSource" />-->
-        <!--<property name="hibernateProperties">-->
-            <!--<props>-->
-                <!--<prop key="hibernate.dialect"> org.hibernate.dialect.H2Dialect </prop>-->
-                <!--<prop key="hibernate.hbm2ddl.auto"> update </prop>-->
-                <!--<prop key="hibernate.show_sql"> true </prop>-->
-                <!--<prop key="hibernate.format_sql"> true </prop>-->
-            <!--</props>-->
-        <!--</property>-->
-        <!--<property name="packagesToScan" value="org.ua.bryl"/>-->
-    <!--</bean>-->
+
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="hibernateProperties">

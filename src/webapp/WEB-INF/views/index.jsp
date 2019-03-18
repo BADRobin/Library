@@ -63,37 +63,7 @@
 
 <!-- Marketing messaging and featurettes
 ================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
 
-<%--<div class="container marketing">--%>
-
-    <%--<!-- Three columns of text below the carousel -->--%>
-    <%--<div class="row">--%>
-        <%--<div class="col-lg-4">--%>
-            <%--<img class="img-circle"--%>
-                 <%--src="resources/site-images/circle-1.jpg"--%>
-                 <%--width="140" height="140">--%>
-            <%--<h2>HD Cam погружные</h2>--%>
-            <%--<p>Не пропустите ни одного особого момента, захватите их в HD с нашими продуктами.</p>--%>
-            <%--<p><a class="btn btn-default" href="/book" role="button">Mas &raquo;</a></p>--%>
-        <%--</div><!-- /.col-lg-4 -->--%>
-        <%--<div class="col-lg-4">--%>
-            <%--<img class="img-circle"--%>
-                 <%--src="resources/site-images/circle-3.jpg"--%>
-                 <%--width="140" height="140">--%>
-            <%--<h2>Пальто для леди</h2>--%>
-            <%--<p>Сделать погоду вашим лучшим союзником, носить свой стиль с этим сезонным пальто.</p>--%>
-            <%--<p><a class="btn btn-default" href="/book" role="button">Mas &raquo;</a></p>--%>
-        <%--</div><!-- /.col-lg-4 -->--%>
-        <%--<div class="col-lg-4">--%>
-            <%--<img class="img-circle"--%>
-                 <%--src="resources/site-images/circle-2.jpg"--%>
-                 <%--width="140" height="140">--%>
-            <%--<h2>Настольный Gamer</h2>--%>
-            <%--<p>Наслаждайтесь своими играми в HD с помощью этого настольного компьютера с графикой, посвященной лучшему игровому опыту.</p>--%>
-            <%--<p><a class="btn btn-default" href="/book" role="button">Mas &raquo;</a></p>--%>
-        <%--</div><!-- /.col-lg-4 -->--%>
-    <%--</div><!-- /.row -->--%>
 </div>
 <br>
 <br>
