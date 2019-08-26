@@ -36,6 +36,8 @@ public class Book implements Serializable {
 
     @Transient
     private MultipartFile image;
+    @Transient
+    private MultipartFile bookfile;
 
 
     @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -55,6 +57,14 @@ public class Book implements Serializable {
 
     public void setImage(MultipartFile image) {
         this.image = image;
+    }
+
+    public MultipartFile getBookfile() {
+        return bookfile;
+    }
+
+    public void setBookfile (MultipartFile bookfile){
+        this.bookfile = bookfile;
     }
 
     public String getFirstName() {

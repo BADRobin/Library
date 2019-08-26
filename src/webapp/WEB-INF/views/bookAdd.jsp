@@ -48,6 +48,15 @@
                 <br>
             </div>
 
+            <div class="form-group">
+                <label class="control-label" for="bookfile">Загрузить Книгу</label>
+                <br>
+
+                <br>
+                <form:input path="bookfile" id="bookfile" type="file" class="form:input-large" tabindex="8" size="2024000"/>
+                <br>
+            </div>
+
             <%-- SUBMIT/CANCEL BUTTON  ===========--%>
             <a href="<c:url value="/admin/inventory" />" class="btn btn-default" tabindex="10"> Отменить </a>
             <input type="submit" value="Добавить" class="btn btn-primary" tabindex="9">

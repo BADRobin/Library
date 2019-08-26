@@ -47,6 +47,10 @@
                 <label class="control-label" for="image">Загрузить изображение</label>
                 <form:input path="image" id="image" type="file" class="form:input-large"/>
             </div>
+            <div class="form-group">
+                <label class="control-label" for="bookfile">Загрузить Книгу</label>
+                <form:input path="bookfile" id="bookfile" type="file" class="form:input-large"/>
+            </div>
 
             <%-- SUBMIT/CANCEL BUTTON  ===========--%>
             <a href="<c:url value="/admin/inventory" />" class="btn btn-default"> Отменить </a>
