@@ -50,10 +50,8 @@
 
             <div class="form-group">
                 <label class="control-label" for="bookfile">Загрузить Книгу</label>
-                <br>
 
-                <br>
-                <form:input path="bookfile" id="bookfile" type="file" class="form:input-large" tabindex="8" size="2024000"/>
+                <form:input path="bookFile" id="bookfile" type="file" class="form:input-large" tabindex="8" size="2024000"/>
                 <br>
             </div>
 

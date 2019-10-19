@@ -49,7 +49,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label" for="bookfile">Загрузить Книгу</label>
-                <form:input path="bookfile" id="bookfile" type="file" class="form:input-large"/>
+                <form:input path="bookFile" id="bookfile" type="file" class="form:input-large"/>
             </div>
 
             <%-- SUBMIT/CANCEL BUTTON  ===========--%>

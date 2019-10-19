@@ -59,11 +59,11 @@ public class Book implements Serializable {
         this.image = image;
     }
 
-    public MultipartFile getBookfile() {
+    public MultipartFile getBookFile() {
         return bookfile;
     }
 
-    public void setBookfile (MultipartFile bookfile){
+    public void setBookFile (MultipartFile bookfile){
         this.bookfile = bookfile;
     }
 

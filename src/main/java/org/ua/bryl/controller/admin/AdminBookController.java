@@ -16,10 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.File;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+
 
 
 /**
@@ -32,7 +32,9 @@ public class AdminBookController {
 
 
 
-    private Path path;
+    private Path image;
+    private Path file;
+//    Path image = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book.getBook_id() + ".png");
     private Book_Category_List list_categories = new Book_Category_List();
     @Autowired
     private BookService bookService;
@@ -59,21 +61,21 @@ public class AdminBookController {
         }
         bookService.addBook(book);
         MultipartFile book_image = book.getImage();
-        MultipartFile book_bookfile = book.getBookfile();
+        MultipartFile book_bookFile = book.getBookFile();
         String root_directory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book.getBook_id() + ".png");
-        path = Paths.get(root_directory + "\\WEB-INF\\resources\\book_files\\" + book.getBook_id() + ".doc");
+        image = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book.getBook_id() + ".png");
+        file = Paths.get(root_directory + "\\WEB-INF\\resources\\book_files\\" + book.getBook_id() + ".txt");
         if (book_image != null && !book_image.isEmpty()) {
             try {
-                book_image.transferTo(new File(path.toString()));
+                book_image.transferTo(new File(image.toString()));
 
             } catch (Exception e) {
                 e.printStackTrace();
                 throw new RuntimeException("The book image could not be saved.\n" + e);
             }
-        }else if (book_bookfile != null && !book_bookfile.isEmpty()){
+        }if (book_bookFile != null && !book_bookFile.isEmpty()){
             try {
-                book_bookfile.transferTo(new File(path.toString()));
+                book_bookFile.transferTo(new File(file.toString()));
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -100,20 +102,20 @@ public class AdminBookController {
             return "bookEdit";
         }
         MultipartFile bookImage = book.getImage();
-        MultipartFile bookFile = book.getBookfile();
+        MultipartFile bookFile = book.getBookFile();
         String root_directory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book.getBook_id() + ".png");
-        path = Paths.get(root_directory + "\\WEB-INF\\resources\\book_files\\" + book.getBook_id() + ".doc");
+        image = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book.getBook_id() + ".png");
+        file = Paths.get(root_directory + "\\WEB-INF\\resources\\book_files\\" + book.getBook_id() + ".txt");
 
         if (bookImage != null && !bookImage.isEmpty()) {
                 try {
-                    bookImage.transferTo(new File(path.toString()));
+                    bookImage.transferTo(new File(image.toString()));
                 } catch (Exception e) {
                     throw new RuntimeException("The book image could not be saved.\n" + e);
                 }
-        }else  if(bookFile != null && !bookFile.isEmpty()){
+        }if(bookFile != null && !bookFile.isEmpty()){
             try {
-                bookFile.transferTo(new File(path.toString()));
+                bookFile.transferTo(new File(file.toString()));
             } catch (Exception e) {
                 throw new RuntimeException("The book file could not be saved.\n" + e);
             }
@@ -126,11 +128,12 @@ public class AdminBookController {
     @RequestMapping("/inventory/remove/{book_id}")
     public String deleteBook(@PathVariable("book_id") int book_id, Model model, HttpServletRequest request) {
         String root_directory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book_id + ".png");
-        path = Paths.get(root_directory + "\\WEB-INF\\resources\\book_files\\" + book_id + ".doc");
-        if (Files.exists(path)) {
+        image = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book_id + ".png");
+        file = Paths.get(root_directory + "\\WEB-INF\\resources\\book_files\\" + book_id + ".txt");
+        if (Files.exists(image) & Files.exists(file)) {
             try {
-                Files.delete(path);
+                Files.delete(image);
+                Files.delete(file);
             } catch (Exception e) {
                 e.printStackTrace();
             }

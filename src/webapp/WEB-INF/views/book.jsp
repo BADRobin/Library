@@ -39,7 +39,7 @@
                                     Детали <span class="glyphicon glyphicon-info-sign"></span>
                                 </a>
                                 <c:if test="${pageContext.request.userPrincipal.name != null}">
-                                    <a href="#" class="btn btn-primary" ng-click="addToCart(${book.book_id})" data-toggle="modal" data-target="#myModal">
+                                    <a href="#" class="btn btn-primary" ng-click="download(${book.book_id})" data-toggle="modal" data-target="#myModal">
                                         Скачать <span class="glyphicon glyphicon-download"></span>
                                     </a>
                                 </c:if>
