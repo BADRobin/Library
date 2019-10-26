@@ -34,7 +34,6 @@ public class AdminBookController {
 
     private Path image;
     private Path file;
-//    Path image = Paths.get(root_directory + "\\WEB-INF\\resources\\book_images\\" + book.getBook_id() + ".png");
     private Book_Category_List list_categories = new Book_Category_List();
     @Autowired
     private BookService bookService;
