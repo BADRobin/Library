@@ -33,6 +33,7 @@ or use XAMPP
 SECOND:
 
 Run the application once to let hibernate to create the db tables and then you can run this query in the MySQL console to create the admin user, and from there you can manage the products of the site.
+
 INSERT INTO  users VALUES (1,0,true,'admin','admin');  
 INSERT INTO authorities VALUES (1,'ROLE_ADMIN','admin');   
 (These commands are commented out in applicationContext.xml)
