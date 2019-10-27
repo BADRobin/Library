@@ -31,6 +31,7 @@ Run the mysql workbench console and configure the db credentials wich can be fou
 Configure the server container for the project, i used tomcat 9.0 installed locally and configured inside the IDE.
 
 or use XAMPP
+
 SECOND:
 
 Run the application once to let hibernate to create the db tables and then you can run this query in the MySQL console to create the admin user, and from there you can manage the products of the site.
