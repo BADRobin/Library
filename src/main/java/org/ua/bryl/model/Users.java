@@ -16,6 +16,18 @@ public class Users {
     private boolean enabled;
     private int     people_id;
 
+    public Users(int user_id, String username, String password, boolean enabled, int people_id) {
+        this.user_id = user_id;
+        this.username = username;
+        this.password = password;
+        this.enabled = enabled;
+        this.people_id = people_id;
+    }
+
+    public Users() {
+
+    }
+
     public int getUser_id() {
         return user_id;
     }

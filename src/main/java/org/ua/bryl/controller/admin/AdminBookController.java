@@ -111,8 +111,12 @@ public class AdminBookController {
                     bookImage.transferTo(new File(image.toString()));
                 } catch (Exception e) {
                     throw new RuntimeException("The book image could not be saved.\n" + e);
-                }
-        }if(bookFile != null && !bookFile.isEmpty()){
+                }bookService.editBook(book);
+        }
+
+
+
+        if(bookFile != null && !bookFile.isEmpty()){
             try {
                 bookFile.transferTo(new File(file.toString()));
             } catch (Exception e) {
