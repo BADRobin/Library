@@ -18,13 +18,13 @@ Admin features: View a list of users. Add a book (image of the cover page and th
 
 **To Build:**
 
-## FIRST:
+### FIRST:
 
 * Run the mysql workbench console and configure the db credentials wich can be found at the applicationContext.xml file. 
 * Configure the server container for the project, I used tomcat 9.0 installed locally and configured inside the IDE.
 *  or use ***XAMPP***
 
-## SECOND:
+### SECOND:
 
 Run the application once to let hibernate to create the db tables and then you can run this query in the MySQL console to create the admin user, and from there you can manage the products of the site.
 
