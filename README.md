@@ -1,7 +1,7 @@
 # Library
 ## Library with java and springmvc framework
 
-Project name : Library
+Project name : **Library**
 
 It was my test work. Building Library Using Java Spring Framework and Hibernate
 
@@ -17,7 +17,7 @@ To Build:
 
 * Run the mysql workbench console and configure the db credentials wich can be found at the applicationContext.xml file. 
 * Configure the server container for the project, I used tomcat 9.0 installed locally and configured inside the IDE.
-*  or use __*XAMPP*__
+*  or use ***XAMPP***
 
 ## SECOND:
 
