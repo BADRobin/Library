@@ -16,7 +16,7 @@ Opportunities: Create an administrator (for now, only by adding to the database 
 
 Admin features: View a list of users. Add a book (image of the cover page and the book file itself). The file extension is for now only TXT. <br>When adding a book, the following is entered: book title, author name, book genre, book abstract. <br>Edit book: change the title, author’s name, annotation, book genre, cover image, and even the book’s file itself. Delete the entire book with all attributes.
 
-To Build:
+**To Build:**
 
 ## FIRST:
 
