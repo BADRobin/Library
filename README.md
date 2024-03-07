@@ -5,7 +5,12 @@ Project name : **Library**
 
 It was my test work. Building Library Using Java Spring Framework and Hibernate
 
-Technologies: Spring MVC 5.0.1, Spring Security 5.1.5, Spring WebFlow 2.5.1, Hibernate 5.1.17, MySQL database 5.1.46
+Technologies: <br>
+- Spring MVC 5.0.1, 
+- Spring Security 5.1.5, 
+- Spring WebFlow 2.5.1, 
+- Hibernate 5.1.17, 
+- MySQL database 5.1.46
 
 Opportunities: Create an administrator (for now, only by adding to the database directly). <br>Create a user account (already in the web application interface itself).
 
