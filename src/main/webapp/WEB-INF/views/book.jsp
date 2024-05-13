@@ -12,8 +12,8 @@
         <div class="row">
             <div class="col-sm-8 col-md-10">
                 <div class="page-header">
-                    <h1>Все наши Книги
-                        <small>                              Выбирайте на любой вкус</small>
+                    <h1>All our Books
+                        <small>                              Choose what you like</small>
                     </h1>
                 </div>
             </div>
@@ -36,16 +36,16 @@
                             <p>
                                 <a href="<spring:url value="/book/BookDetails/${book.book_id}" />"
                                    class="btn btn-info">
-                                    Детали <span class="glyphicon glyphicon-info-sign"></span>
+                                    Details <span class="glyphicon glyphicon-info-sign"></span>
                                 </a>
                                 <c:if test="${pageContext.request.userPrincipal.name != null}">
                                     <a href="#" class="btn btn-primary" ng-click="download(${book.book_id})" data-toggle="modal" data-target="#myModal">
-                                        Скачать <span class="glyphicon glyphicon-download"></span>
+                                        Download <span class="glyphicon glyphicon-download"></span>
                                     </a>
                                 </c:if>
                                 <c:if test="${pageContext.request.userPrincipal.name == null}">
                                     <a href="<c:url value="/login"/>" class="btn btn-primary">
-                                        Скачать <span class="glyphicon glyphicon-download"></span>
+                                        Download <span class="glyphicon glyphicon-download"></span>
                                     </a>
                                 </c:if>
                             </p>

@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="В данном приложении вы можете заегистрироватся и скачать книгу.">
-    <meta name="author" content=Разработчик Брыль О.Л.">
+    <meta name="description" content="In this application you can register and download the book.">
+    <meta name="author" content= "Developer Oleh Bryl ">
     <link rel="icon" href="<c:url value="/resources/site-images/33.png.ico" />">
 
     <title>ELib</title>
@@ -47,7 +47,7 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                             aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Переключить навигацию</span>
+                        <span class="sr-only">Switch navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -59,13 +59,13 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav pull-left">
                         <li><a href="<c:url value="/"/>">
-                            <span class="glyphicon glyphicon-home"></span> На главную</a></li>
+                            <span class="glyphicon glyphicon-home"></span> Home</a></li>
                         <li><a href="<c:url value="/book"/>">
-                            <span class="glyphicon glyphicon-th-list"></span> Библтотека </a></li>
+                            <span class="glyphicon glyphicon-th-list"></span> Bible Library </a></li>
 
                         <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
                             <li><a href="<c:url value="/admin" />">
-                                <span class="glyphicon glyphicon-off"></span> Меню администратора</a></li>
+                                <span class="glyphicon glyphicon-off"></span> Admin menu</a></li>
                         </c:if>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
@@ -75,14 +75,14 @@
                             </a>
                             </li>
                             <li><a href="<c:url value="/j_spring_security_logout" />">
-                                <span class="glyphicon glyphicon-share-alt"></span> Выход</a></li>
+                                <span class="glyphicon glyphicon-share-alt"></span> Logout</a></li>
                         </c:if>
 
                         <c:if test="${pageContext.request.userPrincipal.name == null}">
                             <li><a href="<c:url value="/registry" />">
-                                <span class="glyphicon glyphicon-plus-sign"></span> Создать учетную запись</a></li>
+                                <span class="glyphicon glyphicon-plus-sign"></span> Create account</a></li>
                             <li><a href="<c:url value="/login" />">
-                                <span class="glyphicon glyphicon-user"></span> Авторизация</a></li>
+                                <span class="glyphicon glyphicon-user"></span> Authorisation</a></li>
                         </c:if>
                     </ul>
                 </div>
@@ -93,8 +93,8 @@
 
 <div class="container">
     <div class="page-header center">
-        <h1>Библиотека
-            <small>Всегда рады вас видеть</small>
+        <h1>Library
+            <small>You are always welcome</small>
         </h1>
     </div>
 </div>
@@ -112,7 +112,7 @@
 
                 <div class="form-top">
                     <div class="center">
-                        <h3 style="color:#3e8f3e">Авторизация </h3>
+                        <h3 style="color:#3e8f3e">Authorisation </h3>
                     </div>
                 </div>
                 <div class="form-bottom">
@@ -121,17 +121,17 @@
                             <div class="error" style="color: red"> ${error} </div>
                         </c:if>
                         <div class="form-group">
-                            <label class="sr-only" for="username">Пользователь</label>
-                            <input type="text" name="username" placeholder="Пользователь..."
+                            <label class="sr-only" for="username">User</label>
+                            <input type="text" name="username" placeholder="User..."
                                    class="form-username form-control" id="username" tabindex="1">
                         </div>
                         <div class="form-group">
-                            <label class="sr-only" for="password"> Пароль </label>
-                            <input type="password" name="password" placeholder="Пароль..."
+                            <label class="sr-only" for="password"> Password </label>
+                            <input type="password" name="password" placeholder="Password..."
                                    class="form-password form-control" id="password" tabindex="2">
                         </div>
                         <br>
-                        <button type="submit" value="Submit" class="btn btn-primary" tabindex="3">Вход</button>
+                        <button type="submit" value="Submit" class="btn btn-primary" tabindex="3">Login</button>
                         <input type="hidden" name="${_csrf.parameterName}" value="${csrf.token}"/>
                     </form>
                 </div>
@@ -141,9 +141,9 @@
         <br>
         <div class="description">
             <h4>
-                Вы еще не зарегистрированы? <br><br>
+               Are you not registered yet? <br><br>
                 <a class="label label-success" href="<c:url value="/registry"/>" tabindex="4">
-                    Зарегестрируйтесь тут
+                    Register here.
                 </a>
             </h4>
         </div>

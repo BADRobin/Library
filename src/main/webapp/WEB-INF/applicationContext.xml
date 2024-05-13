@@ -10,8 +10,8 @@
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/newbooklib?useSSL=false&amp;serverTimezone=UTC" />
-        <property name="username" value="hbstudent" />
-        <property name="password" value="hbstudent" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
     </bean>
     <!--INSERT INTO  users VALUES (1,0,true,'admin','admin');-->
     <!--INSERT INTO authorities VALUES (1,'ROLE_ADMIN','admin');-->
