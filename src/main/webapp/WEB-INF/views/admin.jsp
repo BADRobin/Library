@@ -7,15 +7,15 @@
     <br>
     <div class="list-group">
         <p class="list-group-item active">
-            Операции
+            Operations
         </p>
         <a class="list-group-item" href="<c:url value="/admin/inventory" />">
             <span class="glyphicon glyphicon-th-list"></span>
-            БИБЛИОТЕКА
+            LIBRARY
         </a>
         <a class="list-group-item" href="<c:url value="/admin/people" /> ">
             <span class="glyphicon glyphicon-user"></span>
-            Список пользователей</a>
+            User list</a>
 
     </div>
     <%--INSERT INTO  users VALUES (1,0,true,'admin','admin');--%>

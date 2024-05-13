@@ -26,7 +26,7 @@
 
         <div class="col-md-6">
 
-            <h3 class="text-info">Сведения о книге</h3>
+            <h3 class="text-info">Book Details</h3>
             <table class="table table-hover table-condensed">
                 <thead>
                 <tr>
@@ -35,17 +35,17 @@
                 </tr>
                 </thead>
                 <tr>
-                    <td><h4>Автор</h4></td>
+                    <td><h4>Author</h4></td>
                     <td><h4>${book.author}</h4></td>
                 </tr>
                 <tr>
-                    <td><h4>Жанр</h4></td>
+                    <td><h4>Genre</h4></td>
                     <td><h4>${book.category}</h4></td>
                 </tr>
 
                 <tr>
 
-                    <td><h3 class="text-info">Краткое описание</h3></td>
+                    <td><h3 class="text-info">Short description</h3></td>
                     <td><p>${book.description}</p></td>
                 </tr>
                     <%-- the rowspan attr is used as a hack to override the table-hover effect --%>
@@ -53,7 +53,7 @@
                         <div class="pager">
                             <li>
                                 <a href="javascript:history.back()">
-                                    <span class="glyphicon glyphicon-backward"></span> Назад
+                                    <span class="glyphicon glyphicon-backward"></span> Back to
                                 </a>
                             </li>
                         </div>
@@ -62,11 +62,11 @@
                         <c:if test="${pageContext.request.userPrincipal.name != null}">
                             <a href="#" class="btn btn-primary" ng-click="addToCart(${book.book_id})"
                                data-toggle="modal" data-target="#myModal">
-                                Скачать <span class="glyphicon glyphicon-download"></span></a>
+                                Download <span class="glyphicon glyphicon-download"></span></a>
                         </c:if>
                         <c:if test="${pageContext.request.userPrincipal.name == null}">
                             <button type="button" href="<spring:url value="/login"/>" class="btn btn-primary">
-                                Скачать <span class="glyphicon glyphicon-download"></span></button>
+                                Download <span class="glyphicon glyphicon-download"></span></button>
                         </c:if>
                     </td>
                 </tr>

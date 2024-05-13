@@ -20,8 +20,8 @@
                  alt="First slide">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Добро пожаловать в приложение!</h1>
-                    <p>Найдите необходимые книги тут.</p>
+                    <h1>Welcome to the app!</h1>
+                    <p>Find the books you need here.</p>
 
                 </div>
             </div>
@@ -32,8 +32,8 @@
                  alt="Second slide">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Большой выбор литературы!</h1>
-                    <p>Все жанры.</p>
+                    <h1>A great selection of literature!</h1>
+                    <p>All genres.</p>
                 </div>
             </div>
         </div>
@@ -43,8 +43,8 @@
                  alt="Third slide">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>А вот тут было лень писать!</h1>
-                    <p>И что-то еще придумывать. Всё равно еще доделывать и редактировать.</p>
+                    <h1>And this is where I was too lazy to write!</h1>
+                    <p>And to think of anything else to write. I still have to finish and edit it.</p>
                 </div>
             </div>
         </div>

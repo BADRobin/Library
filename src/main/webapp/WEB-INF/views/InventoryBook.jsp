@@ -7,19 +7,19 @@
 
 <div class="container-wrapper">
     <div class="container">
-        <h1 style="text-align: center">Библиотека</h1>
+        <h1 style="text-align: center">Library</h1>
         <hr>
         <br>
 
-        <h1>Перечень</h1>
+        <h1>List of</h1>
         <div class="table-responsive">
             <table class="table table-custom table-hover table-condensed">
                 <thead>
                 <tr class="bg-success">
-                    <th>Обложка книги</th>
-                    <th>Название</th>
-                    <th>Автор</th>
-                    <th>Жанр</th>
+                    <th>Book cover</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
 
                     <th></th>
                     <th></th>
@@ -38,34 +38,34 @@
                             <!-- Book INFORMATION-->
                             <a href="<spring:url value="/book/BookDetails/${book.book_id}" />"
                                class="btn btn-info">
-                                Детали <span class=" glyphicon glyphicon-info-sign"></span>
+                                Details <span class=" glyphicon glyphicon-info-sign"></span>
                             </a>
                         </td>
                         <td>
                             <!-- EDIT Book -->
                             <a href="<spring:url value="/admin/inventory/edit/${book.book_id}" />"
                                class="btn btn-success">
-                                Редактировать <span class="glyphicon glyphicon-pencil"></span>
+                                Edit <span class="glyphicon glyphicon-pencil"></span>
                             </a>
                         </td>
                         <td>
                             <!-- ELIMINATE Book-->
                             <a href="<spring:url value="/admin/inventory/remove/${book.book_id}" />"
                                class="btn btn-danger">
-                                Удалить <span class="glyphicon glyphicon-remove"></span>
+                                Delete <span class="glyphicon glyphicon-remove"></span>
                             </a>
                         </td>
                     </tr>
                 </c:forEach>
             </table>
         </div>
-        <a class="btn btn-primary" href="<spring:url value="/admin/inventory/add" />">Добавить книгу</a>
+        <a class="btn btn-primary" href="<spring:url value="/admin/inventory/add" />">Add book</a>
         <br>
         <div class="pager">
             <br>
             <li>
                 <a href="<c:url value="/admin"/>">
-                    <span class="glyphicon glyphicon-backward"></span> Назад
+                    <span class="glyphicon glyphicon-backward"></span> Back to
                 </a>
             </li>
         </div>

@@ -6,17 +6,17 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-            <h1>Список пользователей</h1>
+            <h1>User list</h1>
         </div>
 
         <table class="table table-striped table-hover">
             <thead>
             <tr class="bg-success">
-                <th>имя</th>
+                <th>Name</th>
                 <th>Email</th>
-                <th>телефон</th>
-                <th>Имя пользователя</th>
-                <th>Состояние</th>
+                <th>Phone number</th>
+                <th>User Name</th>
+                <th>Status</th>
             </tr>
             </thead>
             <c:forEach items="${peopleList}" var="people">
@@ -26,10 +26,10 @@
                     <td>${people.people_phone}</td>
                     <td>${people.people_username}</td>
                     <c:if test="${people.enabled == true}">
-                        <td>активный</td>
+                        <td>active</td>
                     </c:if>
                     <c:if test="${people.enabled == false}">
-                        <td>неактивный</td>
+                        <td>inactive</td>
                     </c:if>
 
                 </tr>
@@ -39,7 +39,7 @@
             <br>
             <li>
                 <a href="<c:url value="/admin"/>">
-                    <span class="glyphicon glyphicon-backward"></span> Назад
+                    <span class="glyphicon glyphicon-backward"></span> Back to
                 </a>
             </li>
         </div>
